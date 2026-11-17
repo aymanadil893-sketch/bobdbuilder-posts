@@ -4,7 +4,7 @@ Usage: python3 make_video.py script.json out.mp4 [--models DIR]
 
 script.json:
 {
-  "handle": "@bobdbuildergaming",
+  "handle": "@b0b_dbuilder",
   "voice": "am_michael", "speed": 1.15,
   "beats": [
     {"say": "spoken line", "caption_key": "word to colour",
@@ -455,7 +455,7 @@ def main():
 
     bg = make_bg(); corner = corner_icon()
     caps = [c for b in beats for c in caption_chunks(b)]
-    handle = text_img(script.get("handle", "@bobdbuildergaming"), font(F_BOLD, 42), (255, 255, 255, 170))
+    handle = text_img(script.get("handle", "@b0b_dbuilder"), font(F_BOLD, 42), (255, 255, 255, 170))
     NF = int(total * FPS)
     proc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                              "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", wav,
